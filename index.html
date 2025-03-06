@@ -134,7 +134,7 @@
         var rect = image.getBoundingClientRect(); 
         var imageX = rect.left + rect.width / 2; 
         var imageY = rect.top + rect.height / 2; 
-        var angle = Math.atan2(event.clientY - imageY, event.clientX - imageX) * (90 / Math.PI); image.style.transform = 'rotate(' + angle + 'deg)'; });
+        var angle = Math.atan2(event.clientY - imageY, event.clientX - imageX) * (180 / Math.PI); image.style.transform = 'rotate(' + angle + 'deg)'; });
     </script>
     </body>
 </html>
