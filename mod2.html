@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript Notes</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body class="bg-black"></body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+                <h1 class="navbar-brand"><a class="navbar-brand" href="jsNoteIndex.html"><b class="text-light">JavaScript Notes</b></a></strong></h1>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link text-black" aria-current="page" href="mod1.html">Module One</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black" href="mod2.html"><b>Module Two</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-black" href="mod3.html">Module Three</a>
+                  </li>
+                </ul>
+                <span class="navbar-text">
+                  <a class="nav-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>
+                </span>
+              </div>
+            </div>
+          </nav>
+        
+    <!-- Accordian -->
+    <div class="accordion mt-5" id="accordionExample" >
+      <div class="accordion-item">
+       <h2 class="accordion-header">
+         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+           <strong class="text-black">Arrays</strong>
+         </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong class="text-primary">Arrays are like a train with cars.</strong> In JavaScript, arrays are a type of object that allows you to store multiple values in a single variable.  <strong>Creation:</strong> create an array using square brackets [ ]. For example: "var fruits = ["apple", "banana", "cherry"];"
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <strong class="text-black">Objects</strong>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Object literals and the dot notation</strong><br> One of the most common ways of building an object in JavaScript is using the object literal syntax:  <strong>var user = {};</strong>  //create an object<br>
+            <strong><pre>
+              //creating an object with properties and their values
+var assistantManager = {
+    rangeTilesPerTurn: 3,
+    socialSkills: 30,
+    streetSmarts: 30,
+    health: 40,
+    specialAbility: "young and ambitious",
+    greeting: "Let's make some money"
+}
+  </strong></pre><br>Another way is with dot notaion:<br> 
+             <strong><pre>
+              var house2 = {};
+              house2.rooms = 4;
+              house2.color = "pink";
+              house2.priceUSD = 12345;
+             </strong></pre><br>
+             Both methods can be used together.<br>
+             Bracket notaion: the object properties must have " " around it with bracket notation.<br>
+             Properties in bracket notaion can have spaces. house2["number of rooms"] = 4
+            <pre><strong>
+              var house2 = {};
+              house2["rooms"] = 4;
+              house2['color']= "pink";
+              house2["priceUSD"] = 12345;
+              console.log(house2); // {rooms: 4, color: 'pink', priceUSD: 12345}
+            </pre></strong><br>
+            Bracket Notation can be useful because it can <b>evaluate expressions</b>.<br>
+            <strong><pre> var arrOfKeys = ['speed', 'altitude', 'color'];
+                          var drone = {
+                          speed: 100,
+                          altitude: 200,
+                          color: "red"
+                        }
+                          for (var i = 0; i < arrOfKeys.length; i++) {
+                          console.log(drone[arrOfKeys[i]])
+                        }</pre></strong><br>
+            <strong>Arrays are Objects.</strong> Two of the most common built-in methods for arrays <br>
+            are the<b>push()</b> method and the <b>pop()</b> method.<br>
+            <b class="text-primary">push()- adds an item to the array.</b><br>
+            <pre><strong> var fruits = [];
+                          fruits.push("apple");
+                          fruits.push('pear');
+                          console.log(fruits);
+                              //['apple', 'pear']</strong></pre><br>
+            <b class="text-primary">pop()- removes the last item from the array.</b><br><pre>
+              <strong>
+                fruits.pop();
+                console.log(fruits);
+                    ['apple']
+              </strong>
+            </pre>
+            <br>
+            <strong>A fuction can be built to create arrays:<br><pre>
+            function arrayBuilder(one, two, three) {
+              var arr = [];
+              arr.push(one);
+              arr.push(two);
+              arr.push(three);
+              console.log(arr);
+            }
+            arrayBuilder('apple', 'pear', 'orange')
+              //   ['apple', 'pear', 'orange']
+            </pre>
+            </strong><br>
+            You can store the function as a variable<b> var simpleArray = arrayBuilder('apple', 'pear', 'orange');</b><br>
+            Now <b>console.log(simpleArray);</b> will log ['apple', 'pear', 'orange']
+
+                          
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <strong class="text-black">Math Object</strong>
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+         <div class="accordion-body">
+            <strong>
+              Built-in Number Constants of the Math Object
+            </strong><br>
+            <b>Math.PI</b> which is approximately 3.14159<br>
+            <b>Math.E</b> Euler's constant: which is approximately 2.718<br>
+            <b>Math.LN2</b> The natural logarithm of 2 which is approximately 0.693<br>
+            <br>
+            <strong>Methods for Rounding</strong><br>
+            <b>Math.ceil()</b> rounds up to the next integer<br>
+            <b>Math.floor()</b> rounds down to the next integer<br>
+            <b>Math.round()</b> automatically rounds to the nearest integer<br>
+            <b>Math.trunc()</b> removes the decimal numbers<br>
+            <br>
+            <strong>Arithmetic and calculus methods</strong><br>
+            <pre>Here is a non-conclusive list of some common arithmetic and calculus methods that exist on the Math object: 
+
+              <b>Math.pow(2,3)</b> - calculates the number 2 to the power of 3, the result is 8 
+              
+              <b>Math.sqrt(16)</b> - calculates the square root of 16, the result is 4 
+              
+              <b>Math.cbrt(8)</b> - finds the cube root of 8, the result is 2 
+              
+              <b>Math.abs(-10)</b> - returns the absolute value, the result is 10 
+              
+              Logarithmic methods:<b> Math.log(), Math.log2(), Math.log10()</b> 
+              
+              Return the <b>minimum</b> and <b>maximum</b> values of all the inputs: <b>Math.min(9,8,7) returns 7, Math.max(9,8,7) returns 9.</b>
+              
+               Trigonometric methods: <b>Math.sin(), Math.cos(), Math.tan(), etc.</b></pre><br>
+               <br>
+               Math.random() will make a random number from 0 to 0.99. To get a larger number you can multiply it by another number.<br>
+               <b>var decimal = Math.random();<br>
+                  console.log(decimal);<br>
+                //0.58739705<br>
+                  console.log(decimal * 10);<br>
+                //5.8739705</b>
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <strong class="text-black">Methods</strong>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+         <div class="accordion-body">
+          Here's a list of all the methods covered in this cheat sheet:<br>
+          var name = "john"
+          <ul>
+            <li>name.charAt('0')</li>
+            <li>.concat()</li>
+            <li>.indexOf()</li>
+            <li>.lastIndexOf()</li>
+            <li>.split()</li>
+            <li>.toUpperCase()</li>
+            <li>.toLowerCase()</li>
+          </ul>  
+              
+             
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <strong class="text-black">Bugs and Errors</strong>
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+         <div class="accordion-body">
+            <strong>Bugs</strong>- are mistakes in the code that cause it to not run as expected such as writing <b>(1 + '2') //'12'</b> instead of <b>(1 + 2) //3</b>.<br>
+            <strong>Errors</strong> -are mistakes in the code that result in the code not running at all such as <b>var a = 3   console.log(a + d) //ReferenceError: d is not defined</b><br>
+            Types of Errors
+            <ul>
+              <li>Syntax Error</li>
+              <li>Type Error</li>
+              <li>Refrence Error</li>
+            </ul><br>
+            <strong>Try Catch Blocks</strong><br>
+            <pre>try {</pre>
+            <pre> throw new Error();</pre>
+          <pre>} catch(err) {</pre>
+                <pre>console.log(err)</pre>
+          <pre>}</pre>
+      
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <script src="bootstrap.bundle.min.js"></script> 
+    
+    </body>
+</html>
